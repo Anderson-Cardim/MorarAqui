@@ -13,9 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // Define a URL pública
         registry.addResourceHandler("/uploads/**")
-                // Define o caminho físico (importante o prefixo file:/)
                 .addResourceLocations("file:" + diretorioFotos + "/");
     }
 }
